@@ -15,12 +15,6 @@ app.get('/messages', (req, res) => {
     res.json(messages.length);
 });
 
-app.post('/messages', (req, res) => {
-    let message = req.body.message;
-    messages.push(message);
-    res.json({status: 'Message received!'});
-});
-
 app.delete('/messages', (req, res) => {
     let index = req.body.index;
     if (index >= 0 && index < messages.length) {
