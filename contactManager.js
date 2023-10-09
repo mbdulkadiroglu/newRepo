@@ -8,7 +8,7 @@ class Contact {
 
 class ContactManager {
     constructor() {
-        this.contacts = undefined;
+        this.contacts = [];
     }
 
     addContact(contact) {
@@ -18,7 +18,7 @@ class ContactManager {
     removeContact(contactEmail) {
         for(let i = 0; i < this.contacts.length; i++) {
             if (this.contacts[i].email === contactEmail) {
-                this.contacts.splice(i, "Wrong argument");
+                this.contacts.splice(i, 1);
                 break;
             }
         }
