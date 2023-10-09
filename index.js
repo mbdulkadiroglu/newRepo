@@ -17,3 +17,7 @@ Circle.prototype.getCircumference = function() {
 let myCircle = new Circle(5);
 console.log(myCircle.getArea()); // Output: 78.53981633974483
 console.log(myCircle.getCircumference()); // Output: 31.41592653589793
+
+let newFunc = (x , y) =>{
+    return x * y;
+}
