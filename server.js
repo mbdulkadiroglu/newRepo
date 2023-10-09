@@ -5,14 +5,14 @@ const port = 3000;
 
 app.use(express.json());
 
-let messages = null;
+let messages = [];
 
 app.get('/', (req, res) => {
     res.send('Welcome to the homepage!');
 });
 
 app.get('/messages', (req, res) => {
-    res.json(messages.length);
+    res.json(messages);
 });
 
 app.post('/messages', (req, res) => {
